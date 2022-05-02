@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emojis an an Art Form | Super Cool Site</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Comment this line out to mimic loading with CSS disabled. -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="sr-only sr-only-focusable">Skip to content</a>
+    <!-- This is the intro content for the entire page! It's shared across all pages, so it
+         does not go in <main>. It has a site title and the main site navigation. -->
+    <header class="site-header" role="banner">
+      <h1 class="site-title">Super Cool Semantic HTML Site</h1>
+
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/blog">Blog</a></li>
+          <li class="nav-item"><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- The <main> element has the unique content about *this page* in particular—in this case,
+         a blog post about emojis. Anything common to the whole site goes outside this element.
+         There should only be one <main> per page. -->
+    <main role="main" id="main">
+      <article>
+        <!-- Here's another header! But since this is nested inside the <article>, it describes
+             and introduces the main content of this page in particular. -->
+        <header>
+          <h2>Emojis as an Art Form</h2>
+          <em>By Marie Chatfield</em>
+          <br /><time datetime="2019-07-23 10:05">July 23, 2019</time>
+        </header>
+
+        <!-- Here's the first logical <section> of the blog post <article>. It has its 
+             own <header> with a heading for easy navigation. -->
+        <section aria-labelledby="section-1">
+          <header class="article-header">
+            <h3 id="section-1">Introduction to Emojis</h3>
+          </header>
+
+          <p>
+            Emojis are a wonderful form of self-expression. These succinct and
+            colorful pictures can be used nearly anywhere on the web.
+          </p>
+
+          <p>
+            Emojis communicate emotion, intent, tone. They can be used to create
+            a playful interaction, to lighten up a mood, or evocatively express
+            a feeling.
+          </p>
+
+          <p>
+            Emojis as best used as an accessory—they shouldn't be your main
+            content, but they can be used to add personalilty and quirk. Some
+            products and software apps use emojis to express their unique brand.
+            Some notable examples include Glitch and Notion.
+          </p>
+        </section>
+
+        <!-- This <aside> contains content is related to the content inside its parent <article>
+             but isn't the content itself. It has a header inside it for easy navigation. 
+             Some reader views may leave this content out, while others may render it. -->
+        <aside aria-labelledby="fave-emojis">
+          <h3 id="fave-emojis">My Favorite Emojis</h3>
+
+          <ul>
+            <li>✨ Sparkles to indicate something is magical or whimsical</li>
+            <li>
+              🙃 Upside-down smiley to indicate I am embarrassed or made a
+              mistake
+            </li>
+            <li>💖 Sparkly heart to show extra special love or appreciation</li>
+            <li>🎉 Confetti to celebrate!</li>
+          </ul>
+        </aside>
+
+        <!-- Here's the second logical <section> of the blog post <article>. It has its 
+             own <header> with a heading for easy navigation. -->
+        <section aria-labelledby="section-2">
+          <header class="article-header">
+            <h3 id="section-2">Best Practices</h3>
+          </header>
+
+          <p>
+            Using too many emojis in a row can be difficult for people to
+            understand. And using emojis in lieu of text (on a button, say) can
+            be difficult for screenreaders to dictate meaning or actions. Be
+            careful to make sure your emoji usages are accessible!
+          </p>
+
+          <p>
+            When using emojis, it's important to consider whether your audience
+            will understand your meaning! You may also need to ask yourself if
+            there are other meanings or contexts for emojis that might not match
+            your intent.
+          </p>
+        </section>
+
+        <!-- This <section> contains user comments replying to the blog post.
+             Each comment is its own nested <article>. -->
+        <section aria-labelledby="section-3">
+          <header class="article-header">
+            <h3 id="section-3">Comments on Emojis as an Art Form</h3>
+          </header>
+
+          <article class="comment">
+            <p>Great article on emojis! My fave emoji is 💁🏻‍♀️.</p>
+            <footer>
+              <p>
+                —Dear Marie, <time datetime="2019-07-23 13:11">July 23</time>
+              </p>
+            </footer>
+          </article>
+
+          <article class="comment">
+            <p>I could have written this better.</p>
+            <footer>
+              <p>
+                —Random Internet Hater,
+                <time datetime="2019-07-23 14:10">July 23</time>
+              </p>
+            </footer>
+          </article>
+        </section>
+      </article>
+
+      <footer>
+        <p>This post was sponsored by Very Cool Inc.</p>
+      </footer>
+    </main>
+
+    <!-- This <aside> is at the top-level of the <body>, *not* in the <main>, because
+         it is not related to the main content of this page. -->
+    <aside aria-labelledby="cool-sites">
+      <h2 id="cool-sites">Other Cool Sites</h2>
+
+      <!-- These links are *not* in a <nav> because they don't identify navigation
+           for this site, but external references. -->
+      <ul>
+        <li>
+          <a href="https://www.spacejam.com">Space Jam Original Website</a>
+        </li>
+        <li><a href="https://http.cat/">HTTP Cats</a></li>
+        <li><a href="http://tabbycats.club/">Tabby Cats</a></li>
+      </ul>
+    </aside>
+
+    <!--  This <footer> is common across the entire site! -->
+    <footer class="site-footer" role="contentinfo">
+      <p>Copyright by Marie Chatfield, 2019.</p>
+    </footer>
+  </body>
+</html>
